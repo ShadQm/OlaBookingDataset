@@ -1,16 +1,16 @@
 # OlaBookingDataset
 
-###1. Retrieve all successful bookings:
-'''sql
+-**1. Retrieve all successful bookings:
+```sql
 Select * From "Bookings"
 Where "Booking_Status" = 'Success';
-'''
+```
 
 ###2. Find the average ride distance for each vehicle type:
-'''sql
+```sql
 SELECT "Vehicle_Type", ROUND(AVG("Ride_Distance"),2) as "Average_Ride_Distance" FROM "Bookings"
 GROUP BY "Vehicle_Type"
-'''
+```
 
 --3. Get the total number of cancelled rides by customers:
 SELECT Count("Cancelled_Rides_By_Customer") as "Total_Cancelled_By_Customers"
